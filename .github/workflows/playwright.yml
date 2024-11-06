@@ -10,13 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - name: List Files for Debugging
-      run: ls -R
     - uses: actions/setup-node@v4
       with:
         node-version: lts/*
     - name: Install dependencies
       run: npm install
+      working-directory: ./Playwright/TS
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
       working-directory: ./Playwright/TS
