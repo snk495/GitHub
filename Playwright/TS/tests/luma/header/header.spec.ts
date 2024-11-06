@@ -24,14 +24,14 @@ test.describe('Luma - Header', () => {
 
     test('Sign In returns sign in page when selected', async ({ page }) => {
         //Act
-        await await page.locator(HeaderSelectors.signInLink).click();
+        await page.locator(HeaderSelectors.signInLink).click();
         //Assert
         expect(page.locator(HeaderSelectors.pageTitle)).toContainText('Customer Login')
     });
 
     test('Create an Account returns account creation page when selected', async ({ page }) => {
         //Act
-        await await page.locator(HeaderSelectors.createAcountLink).click();
+        await page.locator(HeaderSelectors.createAcountLink).click();
         //Assert
         expect(page.locator(HeaderSelectors.pageTitle)).toContainText('Create New Customer Account')
     });
@@ -45,7 +45,7 @@ test.describe('Luma - Header', () => {
 
     test('Cart button shows cart dropdown dialog', async ({ page }) => {
         //Act
-        await await page.locator(HeaderSelectors.cartButton).click();
+        await page.locator(HeaderSelectors.cartButton).click();
         //Assert
         expect(page.locator(HeaderSelectors.cartDropdownDialog)).toBeVisible();
     });
