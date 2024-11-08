@@ -13,15 +13,24 @@ jobs:
     - uses: actions/setup-node@v4
       with:
         node-version: lts/*
-    - name: Install dependencies
+    - name: Install TS tests dependencies
       run: npm install
       working-directory: ./Playwright/TS
-    - name: Install Playwright Browsers
+    - name: Install Playwright Browsers for TS tests
       run: npx playwright install --with-deps
       working-directory: ./Playwright/TS
-    - name: Run Playwright tests
+    - name: Run TS Playwright tests
       run: npx playwright test
       working-directory: ./Playwright/TS
+    - name: Install JS tests dependencies
+      run: npm install
+      working-directory: ./Playwright/JS
+    - name: Install Playwright Browsers for JS tests
+      run: npx playwright install --with-deps
+      working-directory: ./Playwright/JS
+    - name: Run JS Playwright tests
+      run: npx playwright test
+      working-directory: ./Playwright/JS
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
