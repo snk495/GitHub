@@ -31,6 +31,19 @@ jobs:
     - name: Run JS Playwright tests
       run: npx playwright test
       working-directory: ./Playwright/JS
+    - name: Setup dotnet C# tests
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.0.x
+    - name: Build & Install dotnet for C# tests
+      run: dotnet build
+      working-directory: ./Playwright/C#/Luma
+    - name: Install Playwright Browsers for C# tests
+      run: pwsh bin/Debug/net8.0/playwright.ps1 install --with-deps
+      working-directory: ./Playwright/C#/Luma
+    - name: Run C# Playwright tests
+      run: dotnet test
+      working-directory: ./Playwright/C#/Luma
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
