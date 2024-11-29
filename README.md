@@ -38,6 +38,20 @@ cd Playwright/{TS/JS}
 npm install
 ```
 
+### Python
+
+Python tests require [python](https://docs.python-guide.org) and pip (should be able to install this with python other see).
+
+Install the dependencies as follows:
+
+```sh
+cd Playwright/Python
+python{version} -m venv Playwright/Python
+source Playwright/Python/bin/activate
+pip install pytest-playwright
+playwright install
+```
+
 ## Usage
 
 With dependencies installed, from the dependency install folder for a given language, run the following command to execute tests:
@@ -52,6 +66,14 @@ dotnet test
 
 ```sh
 npx playwright test
+```
+
+### TS/JS
+
+```sh
+cd Playwright/Python/tests
+source Playwright/Python/bin/activate
+pytest
 ```
 
 ## License
