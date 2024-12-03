@@ -62,13 +62,13 @@ With dependencies installed, from the dependency install folder for a given lang
 dotnet test
 ```
 
-### TS/JS
+### JS/TS
 
 ```sh
 npx playwright test
 ```
 
-### TS/JS
+### Python
 
 ```sh
 cd Playwright/Python/tests
