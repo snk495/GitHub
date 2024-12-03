@@ -40,7 +40,7 @@ npm install
 
 ### Python
 
-Python tests require [python](https://docs.python-guide.org) and pip (should be able to install this with python other see).
+Python tests require [python](https://docs.python-guide.org) and pip (should be able to install this with python).
 
 Install the dependencies as follows:
 
