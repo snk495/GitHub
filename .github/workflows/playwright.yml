@@ -51,9 +51,11 @@ jobs:
     - name: Install Python test dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r requirements.txt
+        python -m pip install pytest-playwright
+      working-directory: ./Playwright/Python
     - name: Install Playwright Browsers for Python tests 
       run: python -m playwright install --with-deps
+      working-directory: ./Playwright/Python
     - name: Run Python Playwright tests
       run: pytest --tracing=retain-on-failure
       working-directory: ./Playwright/Python/tests
