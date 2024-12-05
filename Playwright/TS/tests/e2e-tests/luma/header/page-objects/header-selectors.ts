@@ -1,4 +1,6 @@
 export enum HeaderSelectors {
+    fcDialog = '.fc-dialog-container',
+    fcDialogConsent = '.fc-button.fc-cta-consent',
     lumaLogo = '.logo',
     searchInput = '#search',
     searchButton = 'button[title="Search"]',

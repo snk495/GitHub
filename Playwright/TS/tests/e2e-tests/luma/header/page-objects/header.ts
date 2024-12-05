@@ -10,6 +10,9 @@ export class Luma {
 
     async navigate(url: string) {
       await this.page.goto(url);
+      if (await this.page.locator(HeaderSelectors.fcDialog).isVisible()) {
+        await this.page.locator(HeaderSelectors.fcDialogConsent).click()
+      };
     }
 
    async search(term: string) {
