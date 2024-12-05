@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test.describe('TheCatAPI Success Tests - No API Key', () => {
-  const baseUrl = 'https://api.thecatapi.com/';
+  const baseUrl = 'https://api.thecatapi.com';
 
   test('Successful response returned for a random image from the GET endpoint', async ({ request }) => {
     // Act
